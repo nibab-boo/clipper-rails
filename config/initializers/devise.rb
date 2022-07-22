@@ -21,11 +21,10 @@ Devise.setup do |config|
   # config.parent_controller = 'DeviseController'
 
   config.omniauth :google_oauth2, ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_CLIENT_SECRET"],
-    scope: 'email',
-    info_fields: 'email, first_name, last_name',
+    scope: 'email, profile',
+    prompt: 'select_account',
     image_aspect_ratio: 'square',
     image_size: 50
-    secure_image_url: true
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
