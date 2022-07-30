@@ -1,0 +1,18 @@
+<h1>Pages#FILES</h1>
+<p>Find me in app/views/pages/files.html.erb</p>
+
+<%# <%= link_to "document", oauth_path %>
+
+<%# <%= link_to "files", files_path %>
+
+<ul>
+  <h2>Files list</h2>
+  
+  <% @files.files.each do |file| %>
+    <li>
+      <%= link_to (file.name), fetch_file_path(file.id) %>
+      <%#= file.name %>
+    </li>
+  <% end %>
+  
+</ul>
