@@ -31,7 +31,7 @@ gem 'omniauth-rails_csrf_protection'
 
 # gem googleauth
 gem 'googleauth'
-gem 'google-apis-docs_v1'
+gem 'google-apis-drive_v3'
 gem "signet"
 
 # Reduces boot times through caching; required in config/boot.rb
