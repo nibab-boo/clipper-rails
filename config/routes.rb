@@ -3,6 +3,20 @@ Rails.application.routes.draw do
     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root to: 'pages#home'
 
+
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      get "/login", to: "users#login"
+    end
+  end
+
+
+
+
+
+
+
+
   get "/oauth/callback", to: "document_callbacks#oauth_callback"
 
   get "/oauth", to: "document_callbacks#oauth"
@@ -12,5 +26,5 @@ Rails.application.routes.draw do
 
   get "/files", to: "pages#files"
   get "/fetch_file/:id", to: "pages#fetch_file", as: "fetch_file"
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
 end
