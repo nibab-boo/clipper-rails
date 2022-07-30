@@ -34,6 +34,9 @@ gem 'googleauth'
 gem 'google-apis-drive_v3'
 gem "signet"
 
+# api authorization
+gem 'simple_token_authentication', '~> 1.0'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
